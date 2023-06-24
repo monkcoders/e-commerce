@@ -1,0 +1,8 @@
+{
+  "short_name": "Ecommerce Website",
+  "name": "It is a ecommerce website",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
