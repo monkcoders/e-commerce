@@ -1,8 +1,11 @@
 import {  Business, Email, Facebook, Instagram, LinkedIn, LocalPhone, Twitter } from "@mui/icons-material";
 import styled from "styled-components";
+import { Mobile} from "../Responsive";
 
 const Container = styled.div`
   display: flex;
+  ${Mobile({flexDirection:"column"})}
+
 `;
 const Left = styled.div`
   flex: 1;
@@ -41,6 +44,7 @@ margin: 10px;
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${Mobile({display:"none"})}
 
 `;
 
@@ -66,6 +70,8 @@ width: 50%;
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${Mobile({backgroundColor:"#f0f3f3"})}
+
 `;
 
 const ContactItem = styled.div`

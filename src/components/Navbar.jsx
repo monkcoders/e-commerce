@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import { Badge } from '@mui/material';
 import { ShoppingCartOutlined } from "@mui/icons-material";
+import { Mobile } from "../Responsive";
 
 //styled div is used to give css styles itself in the js file we simply have to import styled-components packages and then wherever we want to style we simply write 
 //style.htmlTagToStyle`all css styles inside the backtics its similar to add container class to a div `
@@ -12,6 +13,13 @@ import { ShoppingCartOutlined } from "@mui/icons-material";
 
 const Container = styled.div`
     height: 60px;
+
+    /* @media screen and (min-width: 380px) {
+        display: none; // applying media query using naive method
+    } */
+    ${Mobile({height:"50px"})}
+ 
+    
 `
 
 const Wrapper = styled.div`
@@ -19,6 +27,8 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
+    ${Mobile({padding:"10px 2px" })}
+
 
 `
 //when all are set to flex=1 then all will be of same width 
@@ -31,6 +41,7 @@ const Left = styled.div`
 const Language = styled.span`
     font-size:14px;
     cursor:pointer;
+    ${Mobile({display:"none"})}
 `
 //to align items veritically use align-items:center
 //to bring items in a single row use  flex display property in the parent display:flex
@@ -42,22 +53,29 @@ const SearchContainer = styled.div`
     align-items:center;
     margin-left:25px;
     padding:5px;
+    ${Mobile({margin:"0 10px",padding:"2px" })}
 
 `
 
 const Input= styled.input`
     border:none;
+    ${Mobile({width:"12vw" })}
+
 
 `
 //for aligning text we use text-align property of css
 const Center = styled.div`
     flex:1;
     text-align:center;
+  ${Mobile({width:"15vw"})}
+
 
 `
 
 const Logo = styled.h1`
     font-weight:bold;
+    ${Mobile({fontSize:"22px"})}
+
 `
 
 const Right = styled.div`
@@ -65,6 +83,8 @@ const Right = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-end;
+    ${Mobile({justifyContent:"center", flex:"2"})}
+
 
 
 `
@@ -73,6 +93,8 @@ const MenuItem = styled.div`
     font-size:14px;
     cursor:pointer;
     margin-left:25px;
+    ${Mobile({fontSize:"12px", marginLeft:"10px"})}
+
 `
 
 const Navbar = ()=>{
@@ -82,7 +104,7 @@ const Navbar = ()=>{
                 <Left>
                     <Language>EN</Language>
                     <SearchContainer style={{ color:"gray", fontSize:16  }}>
-                        <Input/>
+                        <Input placeholder="search"/>
                         <SearchIcon/>
                     </SearchContainer>
                 </Left>

@@ -1,5 +1,6 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@mui/icons-material";
 import styled  from "styled-components"
+import { Mobile } from "../Responsive";
 
 const Info=styled.div`
 opacity:0;
@@ -32,6 +33,9 @@ const Container = styled.div`
   &:hover ${Info}{
     opacity: 1;
   }
+
+  
+
 `
 
 const Circle=styled.div`

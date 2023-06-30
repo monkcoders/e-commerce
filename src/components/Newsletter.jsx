@@ -1,6 +1,7 @@
 import { Send } from '@mui/icons-material';
 
 import styled from 'styled-components';
+import { Mobile } from '../Responsive';
 
 
 const Container = styled.div`
@@ -9,16 +10,21 @@ background-color: #f0f0f0;display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
 `
 const Title = styled.h1`
 font-size: 70px;
 margin-bottom: 20px;
+${Mobile({fontSize:"58px"})}
+
 `
 
 const Description = styled.div`
 font-size: 24px;
 font-weight: 300;
 margin-bottom: 20px;
+${Mobile({textAlign:"center" })}
+
 
 `
 const InputContainer = styled.div`
@@ -28,6 +34,8 @@ background-color: #fff;
 display: flex;
 justify-content: space-between;
 border:1px solid lightgray;
+${Mobile({width:"80%" })}
+
 `
 
 const Input = styled.input`

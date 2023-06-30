@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { sliderItems } from "../data";
+import { Mobile } from "../Responsive";
 
 const {
   ArrowLeftOutlined,
@@ -13,6 +14,8 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${Mobile({display:"none"})}
+
 `;
 
 const Arrow = styled.div`

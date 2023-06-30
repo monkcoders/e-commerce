@@ -2,11 +2,14 @@ import styled from 'styled-components'
 
 import { categories } from "../data";
 import CategoryItem from './CategoryItem';
+import { Mobile } from '../Responsive';
 
 const Container = styled.div`
 display: flex;
 padding:20px;
 justify-content: space-between;
+${Mobile({flexDirection:"column" })}
+
 `
 
 const Categories = ()=>{

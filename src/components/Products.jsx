@@ -1,16 +1,18 @@
 import styled from 'styled-components'
 import { popularProduct } from '../data';
 import ProductItems from './ProductItems';
+import { Mobile } from '../Responsive';
 
 const Container = styled.div`
     padding:20px;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 
 `;
 
-const Product =()=>{
+const Products =()=>{
     return (
         <Container>
 
@@ -25,4 +27,4 @@ const Product =()=>{
     );
 }
 
-export default Product;
+export default Products;
